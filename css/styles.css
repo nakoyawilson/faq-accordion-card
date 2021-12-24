@@ -1,3 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --dark-grayish-blue: hsl(237, 12%, 33%);
+  --grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(0deg, var(--soft-blue), var(--soft-violet));
+  background-repeat: no-repeat;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  background-color: var(--color-white);
+  margin: auto;
+  display: flex;
+  width: 58rem;
+  border-radius: 20px;
+}
+
+.image-content {
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  width: 45%;
+}
+
+.desktop-image {
+  padding: 4rem 0;
+}
+
+.text-content {
+  padding: 2.5rem 4rem;
+  margin: auto 0;
+  width: 55%;
+}
+
+.question {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+}
+
+.question:hover {
+  cursor: pointer;
+  color: var(--soft-red);
+}
+
+.question::after {
+  content: url(../images/icon-arrow-down.svg);
+  float: right;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.active::after {
+  content: url(../images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+}
+
+.answer {
+  display: none;
+}
+
+.divider {
+  border-top: 1px solid var(--light-grayish-blue);
+  margin: 1rem 0;
+}
+
 /* Footer Section */
 .attribution {
   font-size: 11px;
