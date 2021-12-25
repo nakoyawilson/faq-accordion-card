@@ -27,7 +27,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   color: var(--dark-grayish-blue);
+  line-height: 1.6;
 }
 
 main {
@@ -50,11 +52,15 @@ main {
   position: relative;
 }
 
-.test {
+.mobile-image {
+  display: none;
+}
+
+.wrapper {
   overflow: hidden;
 }
 
-.main-image {
+.main-image-desktop {
   padding: 4rem 0;
   position: relative;
   right: 5rem;
@@ -114,6 +120,7 @@ main {
 .answer {
   display: none;
   color: var(--grayish-blue);
+  padding-right: 0.5rem;
 }
 
 .divider {
@@ -128,4 +135,54 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1100px) {
+  main {
+    flex-direction: column;
+    width: 90%;
+    margin: 10rem auto 5rem;
+  }
+
+  .image-content,
+  .text-content {
+    width: 100%;
+  }
+  .image-content {
+    background-image: url(../images/bg-pattern-mobile.svg);
+    background-size: 80%;
+    background-position-x: center;
+  }
+
+  .desktop-images {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+    text-align: center;
+  }
+
+  .wrapper-mobile {
+    position: relative;
+    margin-bottom: 8rem;
+    text-align: center;
+  }
+
+  .main-image-mobile {
+    position: absolute;
+    width: 80%;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  .text-content {
+    padding: 2.5rem 2rem 2rem;
+  }
+
+  .title {
+    text-align: center;
+    margin: 0 0 2rem;
+  }
 }
