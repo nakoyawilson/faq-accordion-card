@@ -33,7 +33,7 @@ body {
 
 .main-section {
   background-color: var(--color-white);
-  margin: 8rem auto;
+  margin: 8rem 15rem 8rem 17.5rem;
   display: flex;
   width: min(87.2%, 57.5rem);
   border-radius: 20px;
