@@ -37,6 +37,7 @@ body {
   display: flex;
   width: min(87.2%, 57.5rem);
   border-radius: 20px;
+  box-shadow: 0 1rem 3rem var(--dark-grayish-blue);
 }
 
 .image-content {
