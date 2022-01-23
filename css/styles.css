@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 :root {
+  --font: "Kumbh Sans", sans-serif;
   --desaturated-blue: hsl(238, 29%, 16%);
   --soft-red: hsl(14, 88%, 65%);
   --soft-violet: hsl(273, 75%, 66%);
@@ -21,34 +22,28 @@
 body {
   background: linear-gradient(0deg, var(--soft-blue), var(--soft-violet));
   background-repeat: no-repeat;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--font);
   font-size: 12px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   color: var(--dark-grayish-blue);
   line-height: 1.6;
 }
 
-main {
+/* Main Section */
+
+.main-section {
   background-color: var(--color-white);
-  margin: auto;
+  margin: 8rem auto;
   display: flex;
-  width: 58rem;
+  width: min(87.2%, 57.5rem);
   border-radius: 20px;
 }
 
 .image-content {
   background-image: url(../images/bg-pattern-desktop.svg);
+  background-position: top -295px right 20px;
   background-repeat: no-repeat;
-  background-size: cover;
   width: 45%;
-}
-
-.desktop-images {
-  /* overflow: hidden; */
   position: relative;
 }
 
@@ -60,7 +55,7 @@ main {
   overflow: hidden;
 }
 
-.main-image-desktop {
+.main-image {
   padding: 4rem 0;
   position: relative;
   right: 5rem;
@@ -70,12 +65,13 @@ main {
   position: absolute;
   top: 12.5rem;
   left: -5.75rem;
-  transition: left 1s;
+  transform: translateX(0);
+  transition: transform 1s;
 }
 
 .box-active {
-  left: -8rem;
-  transition: left 1s;
+  transform: translateX(-2.25rem);
+  transition: transform 1s;
 }
 
 .text-content {
@@ -87,6 +83,7 @@ main {
 .title {
   color: var(--desaturated-blue);
   margin: 0 0 3rem;
+  font-size: 2rem;
 }
 
 .question {
@@ -138,11 +135,10 @@ main {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1100px) {
-  main {
+@media screen and (max-width: 1084px) {
+  .main-section {
     flex-direction: column;
-    width: 90%;
-    margin: 10rem auto 5rem;
+    margin: 9.5rem auto 5rem;
   }
 
   .image-content,
@@ -151,30 +147,28 @@ main {
   }
   .image-content {
     background-image: url(../images/bg-pattern-mobile.svg);
-    background-size: 80%;
-    background-position-x: center;
+    background-position: top 0 center;
+    background-size: contain;
   }
 
-  .desktop-images {
+  .box {
     display: none;
   }
 
-  .mobile-image {
-    display: block;
-    text-align: center;
+  .wrapper {
+    height: 7rem;
+    margin-inline: auto;
+    overflow: visible;
   }
 
-  .wrapper-mobile {
-    position: relative;
-    margin-bottom: 8rem;
-    text-align: center;
-  }
-
-  .main-image-mobile {
+  .main-image {
     position: absolute;
-    width: 80%;
-    bottom: 2rem;
-    left: 2rem;
+    top: -175px;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 16rem;
+    height: auto;
   }
 
   .text-content {
@@ -184,5 +178,11 @@ main {
   .title {
     text-align: center;
     margin: 0 0 2rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .main-image {
+    width: min(100%, 14rem);
   }
 }
