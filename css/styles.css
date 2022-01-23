@@ -42,9 +42,9 @@ body {
 
 .image-content {
   background-image: url(../images/bg-pattern-desktop.svg);
-  background-position: top -295px right 20px;
+  background-position: top -295px right 70px;
   background-repeat: no-repeat;
-  width: 45%;
+  width: 51%;
   position: relative;
 }
 
@@ -76,9 +76,9 @@ body {
 }
 
 .text-content {
-  padding: 2.5rem 4rem;
+  padding-right: 7rem;
   margin: auto 0;
-  width: 55%;
+  width: 49%;
 }
 
 .title {
